@@ -22,6 +22,4 @@
         padding 15px
         font-size 14px
         color $color-grey
-        box-shadow 0 0 5px $color-light-grey
-        background-color $color-light-grey-sss
 </style>
