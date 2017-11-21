@@ -1,23 +1,28 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <header class="app-header border-bottom-1px">
+      <img src="./assets/img/logo.png">
+    </header>
+
+    <router-link to="/spin" class="link-cell">111</router-link>
+    <router-link to="/spin" class="link-cell">222</router-link>
+    <router-link to="/spin" class="link-cell">333</router-link>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  import Cell from './components/cell/cell'
+
+  export default {
+    name: 'app'
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus" rel="stylesheet/stylus">
+  @import "assets/stylus/default.styl"
+
+  .app-header {
+    width 100%
+    background-color $color-light-grey-sss
+  }
 </style>
