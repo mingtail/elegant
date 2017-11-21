@@ -1,0 +1,27 @@
+<template>
+  <section class="tab">
+    <ul class="tab-list">
+      <li class="tab-item border-bottom-1px"><router-link to="/spin" class="cell">Spin</router-link></li>
+      <li class="tab-item border-bottom-1px"><router-link to="/checkbox" class="cell">CheckBox</router-link></li>
+    </ul>
+  </section>
+</template>
+
+<script type="text/javascript">
+  export default {}
+</script>
+
+<style scoped lang="stylus" rel="stylesheet/stylus">
+  @import "../../assets/stylus/default.styl"
+
+  .tab-list
+    padding 0 10px
+    .tab-item
+      .cell
+        display block
+        padding 15px
+        font-size 14px
+        color $color-grey
+        box-shadow 0 0 5px $color-light-grey
+        background-color $color-light-grey-sss
+</style>

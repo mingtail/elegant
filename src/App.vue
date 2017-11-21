@@ -1,28 +1,36 @@
 <template>
   <div id="app">
     <header class="app-header border-bottom-1px">
-      <img src="./assets/img/logo.png">
+      <img src="./assets/img/logo.png" width="64" height="64">
     </header>
+    <tab></tab>
 
-    <router-link to="/spin" class="link-cell">111</router-link>
-    <router-link to="/spin" class="link-cell">222</router-link>
-    <router-link to="/spin" class="link-cell">333</router-link>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+
   </div>
 </template>
 
 <script>
-  import Cell from './components/cell/cell'
+  import Tab from './components/tab/tab'
 
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      Tab
+    }
   }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "assets/stylus/default.styl"
 
-  .app-header {
-    width 100%
-    background-color $color-light-grey-sss
-  }
+  #app
+    .app-header
+      padding 10px
+      text-align center
+      box-shadow 0 0 5px $color-light-grey
+      background-color $color-light-grey-sss
+
 </style>
