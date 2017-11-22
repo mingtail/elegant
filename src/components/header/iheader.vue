@@ -1,5 +1,7 @@
 <template>
-  <header class="i-header border-bottom-1px"><i class=""></i>{{title}}</header>
+  <header class="i-header border-bottom-1px">
+    <i class="back icon-arrow-left" @click="goBack"></i>{{title}}
+  </header>
 </template>
 
 <script type="text/javascript">
@@ -11,7 +13,9 @@
       return {}
     },
     methods: {
-
+      goBack() {
+        this.$router.back()
+      }
     }
   }
 </script>
@@ -20,6 +24,7 @@
   @import "../../assets/stylus/default.styl"
 
   .i-header
+    position relative
     height 44px
     line-height 44px
     font-size 16px
@@ -27,4 +32,8 @@
     color $color-grey
     box-shadow 0 0 8px $color-light-grey
     background-color $color-light-grey-sss
+    .back
+      position absolute
+      left 0
+      padding 0 15px
 </style>

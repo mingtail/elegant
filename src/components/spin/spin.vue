@@ -1,14 +1,12 @@
 <template>
-  <transition name="slide">
-    <div class="spin">
-      <i-header :title="title"></i-header>
-      <ul class="spin-list">
-        <li class="spin-item">
+  <div class="spin">
+    <i-header :title="title"></i-header>
+    <ul class="spin-list">
+      <li class="spin-item">
 
-        </li>
-      </ul>
-    </div>
-  </transition>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script type="text/javascript">
@@ -17,8 +15,7 @@
   export default {
     data() {
       return {
-        title: 'Spin',
-        content: ''
+        title: 'Spin'
       }
     },
     components: {
@@ -38,4 +35,5 @@
     width 100%
     height 100%
     background-color #fff
+
 </style>
