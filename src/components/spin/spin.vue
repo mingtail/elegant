@@ -17,7 +17,8 @@
   export default {
     data() {
       return {
-        title: 'Spin'
+        title: 'Spin',
+        content: ''
       }
     },
     components: {

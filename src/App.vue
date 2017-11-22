@@ -32,5 +32,4 @@
       text-align center
       box-shadow 0 0 5px $color-light-grey
       background-color $color-light-grey-sss
-
 </style>

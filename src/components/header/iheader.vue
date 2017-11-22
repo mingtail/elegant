@@ -7,7 +7,9 @@
     props: {
       title: String
     },
-    data() {},
+    data() {
+      return {}
+    },
     methods: {
 
     }
