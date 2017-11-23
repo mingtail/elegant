@@ -2,12 +2,10 @@
   <section class="tab">
     <ul class="tab-list">
       <li class="tab-item border-bottom-1px">
-        <router-link to="/spin" class="cell">Spin
-          <i class="icon-arrow-right"></i></router-link>
+        <router-link to="/spin" class="cell">Spin<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
-        <router-link to="/checkbox" class="cell">CheckBox
-          <i class="icon-arrow-right"></i></router-link>
+        <router-link to="/checkbox" class="cell">CheckBox<i class="icon-arrow-right"></i></router-link>
       </li>
     </ul>
   </section>
