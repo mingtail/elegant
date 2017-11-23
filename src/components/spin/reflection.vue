@@ -27,18 +27,15 @@
         clearTimeout(self.timerIndex);
         self.$refs.reflection.querySelector('.bounce-reflection').classList.remove('bounce-3rd')
         self.isShow = true;
-        console.log(self.$refs.reflection.querySelector('.bounce-reflection').classList)
 
         self.$refs.reflection.style.left = x - 20 + 'px';
         self.$refs.reflection.style.top = y - 20 + 'px';
 
         self.$refs.reflection.querySelector('.bounce-reflection').classList.add('bounce-3rd')
-        console.log(self.$refs.reflection.querySelector('.bounce-reflection').classList)
 
         self.timerIndex = setTimeout(function() {
           self.isShow = false;
           self.$refs.reflection.querySelector('.bounce-reflection').classList.remove('bounce-3rd')
-          console.log(self.$refs.reflection.querySelector('.bounce-reflection').classList)
         },1000)
       }
     }
