@@ -1,5 +1,5 @@
 <template>
-  <div class="spin-container">
+  <div class="spin-container" @mousedown="showCircle($event)">
     <i-header :title="title"></i-header>
     <ul class="spin-list">
 
@@ -38,28 +38,39 @@
           </svg>
         </div>
       </li>
-
     </ul>
+
+    <reflection :size="40" ref="reflection"></reflection>
+
   </div>
 </template>
 
 <script type="text/javascript">
   import IHeader from '../header/iheader'
+  import Reflection from './reflection'
 
   export default {
     data() {
       return {
         title: 'Spin',
-        size: 'size-40'
+        size: 40,
+        isShow: false,
+        timerIndex: 0
       }
     },
     computed: {
       getSize() {
-        return this.size
+        return `size-${this.size}`
+      }
+    },
+    methods: {
+      showCircle(e) {
+        this.$refs.reflection.showReflection(e.pageX, e.pageY)
       }
     },
     components: {
-      IHeader
+      IHeader,
+      Reflection
     }
   }
 
@@ -91,13 +102,12 @@
           width 40px
           height 40px
         .snake-simple
-          /*position absolute*/
           border-radius 50%
           border 4px solid transparent
           animation rotate-simple 0.8s infinite linear
         .spinner
           position relative
-          .bounce-1st, .bounce-2nd, .bounce-3rd, .bounce-4th
+          .bounce-1st, .bounce-2nd, .bounce-3rd, .bounce-4th, .bounce-reflection
             position absolute
             top 0
             left 0
