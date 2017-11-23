@@ -2,8 +2,9 @@
   <div class="check-box">
     <i-header :title="title"></i-header>
     <ul class="check-list">
-      <li class="check-item">
-
+      <li v-for="(item, index) in list" class="check-item border-bottom-1px">
+        <input :id="`item_${index}`" type="checkbox" class="toggle" v-model="item.isChecked">
+        <label :for="`item_${index}`">{{item.content}}</label>
       </li>
     </ul>
   </div>
@@ -15,8 +16,15 @@
   export default {
     data() {
       return {
-        title: 'CheckBox'
+        title: 'CheckBox',
+        list: [
+          {content: '吃饭', isChecked: false},
+          {content: '睡觉', isChecked: true},
+          {content: '打豆豆', isChecked: false}
+        ]
       }
+    },
+    computed: {
     },
     components: {
       IHeader
@@ -35,5 +43,25 @@
     width 100%
     height 100%
     background-color #fff
+    .check-list
+      padding 10px 10px 0
+      .check-item
+        position relative
+        display flex
+        padding 15px 20px
+        .toggle
+          /*display none*/
+          text-align: center;
+          width: 40px;
+          /* auto, since non-WebKit browsers doesn't support input styling */
+          height: auto;
+          position: absolute;
+          top: 5px;
+          bottom: 0;
+          margin: auto 0;
+          appearance: none;
+          &:after {
+            content url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="40" fill="none" stroke="#ededed" stroke-width="3"/></svg>')
+          }
 
 </style>
