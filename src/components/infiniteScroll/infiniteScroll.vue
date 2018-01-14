@@ -1,7 +1,7 @@
 <template>
   <div class="m-infinite-scroll">
     <div v-show="loading && !noData" class="m-loading">
-      <span style="stroke: #999; fill:#999;width: 28px;height: 28px;">
+      <span>
         <svg viewBox="0 0 64 64">
             <g>
               <circle cx="16" cy="32" stroke-width="0" r="5.35374">

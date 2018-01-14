@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrap">
-    <i-header title="Refresh-InfiniteScroll"></i-header>
+    <i-header :title="title"></i-header>
     <div class="list-wrap" ref="listWrap">
       <refresh :refreshing="refreshing"
                :trigger="trigger"
@@ -28,6 +28,8 @@
     name: "list",
     data() {
       return {
+        title: 'Refresh-InfiniteScroll',
+
         refreshing: false,
         trigger: null,
 
@@ -52,7 +54,7 @@
       refresh() {
         let self = this
         self.refreshing = true;
-        setInterval(() => {
+        setTimeout(() => {
           for(let i = 1; i <= 2; i++) {
             self.list.unshift('refresh item' + self.refreshNum++);
           }
@@ -64,7 +66,7 @@
         self.noData = false;
         self.loading = true;
         if(self.list.length<=50) {
-          setInterval(() => {
+          setTimeout(() => {
             for(let i = 1; i <= 2; i++) {
               self.list.push('load item' + self.loadNum++);
             }

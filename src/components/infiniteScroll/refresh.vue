@@ -221,6 +221,8 @@
     position relative
     width 24px
     height 24px
+    stroke #2ed335
+    fill #2ed335
 
   .circular
     position: absolute
@@ -239,7 +241,7 @@
     stroke-dashoffset: 0
     stroke-linecap: round
     stroke: $color-spin-green
-    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite
+    animation: dash 1.5s ease-in-out infinite
 
   @keyframes rotate
     100%
@@ -256,16 +258,6 @@
     100%
       stroke-dasharray: 89, 200
       stroke-dashoffset: -124
-
-  @keyframes color
-    100%, 0%
-      stroke: $color-spin-red
-    40%
-      stroke: $color-spin-blue
-    66%
-      stroke: $color-spin-green
-    80%, 90%
-      stroke: $color-spin-yellow
 
 
 </style>
