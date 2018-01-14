@@ -58,23 +58,23 @@
           for(let i = 1; i <= 2; i++) {
             self.list.unshift('refresh item' + self.refreshNum++);
           }
+          self.refreshing = false;
         },2000)
       },
       loadMore() {
         let self = this
-        let n = Math.round(Math.random());
-        self.noData = false;
         self.loading = true;
-        if(self.list.length<=50) {
-          setTimeout(() => {
+        self.noData = false;
+        setTimeout(() => {
+          if(Math.random() > 0.5) {
             for(let i = 1; i <= 2; i++) {
               self.list.push('load item' + self.loadNum++);
             }
             self.loading = false;
-          },2000)
-        } else {
-          self.noData = true;
-        }
+          } else {
+            self.noData = true;
+          }
+        },2000)
       }
     },
     components: {
