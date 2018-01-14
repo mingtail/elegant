@@ -7,6 +7,9 @@
       <li class="tab-item border-bottom-1px">
         <router-link to="/checkbox" class="cell">CheckBox<i class="icon-arrow-right"></i></router-link>
       </li>
+      <li class="tab-item border-bottom-1px">
+        <router-link to="/refresh-infiniteScroll" class="cell">refresh-infiniteScroll<i class="icon-arrow-right"></i></router-link>
+      </li>
     </ul>
   </section>
 </template>

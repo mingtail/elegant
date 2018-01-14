@@ -38,6 +38,55 @@
           </svg>
         </div>
       </li>
+
+      <li class="spin-item border-bottom-1px">
+        <span class="item-name">ripple</span>
+        <div class="spinner spin-color" :class="getSize">
+          <svg viewBox="0 0 64 64">
+            <g fill="none" fill-rule="evenodd" stroke-width="3">
+              <circle cx="32" cy="32" r="23.7813">
+                <animate attributeName="r" begin="0s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1"
+                         calcMode="spline" repeatCount="indefinite"></animate>
+                <animate attributeName="stroke-opacity" begin="0s" dur="2s" values=".2;1;.2;0"
+                         repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="32" cy="32" r="16.9226">
+                <animate attributeName="r" begin="-1s" dur="2s" values="0;24" keyTimes="0;1" keySplines="0.1,0.2,0.3,1"
+                         calcMode="spline" repeatCount="indefinite"></animate>
+                <animate attributeName="stroke-opacity" begin="-1s" dur="2s" values=".2;1;.2;0"
+                         repeatCount="indefinite"></animate>
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </li>
+
+      <li class="spin-item border-bottom-1px">
+        <span class="item-name">dots</span>
+        <div class="spinner spin-color" :class="getSize">
+          <svg viewBox="0 0 64 64">
+            <g>
+              <circle cx="16" cy="32" stroke-width="0" r="5.35374">
+                <animate attributeName="fill-opacity" dur="750ms" values=".5;.6;.8;1;.8;.6;.5;.5"
+                         repeatCount="indefinite"></animate>
+                <animate attributeName="r" dur="750ms" values="3;3;4;5;6;5;4;3" repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="32" cy="32" stroke-width="0" r="5.64626">
+                <animate attributeName="fill-opacity" dur="750ms" values=".5;.5;.6;.8;1;.8;.6;.5"
+                         repeatCount="indefinite"></animate>
+                <animate attributeName="r" dur="750ms" values="4;3;3;4;5;6;5;4" repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="48" cy="32" stroke-width="0" r="4.64626">
+                <animate attributeName="fill-opacity" dur="750ms" values=".6;.5;.5;.6;.8;1;.8;.6"
+                         repeatCount="indefinite"></animate>
+                <animate attributeName="r" dur="750ms" values="5;4;3;3;4;5;6;5" repeatCount="indefinite"></animate>
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </li>
+
+
     </ul>
 
     <reflection :size="40" ref="reflection"></reflection>
@@ -52,7 +101,7 @@
   export default {
     data() {
       return {
-        title: 'Spin',
+        title: 'Spinner',
         size: 40,
         isShow: false,
         timerIndex: 0
@@ -124,5 +173,8 @@
             animation single-bounce 1.0s infinite ease
           .bounce-4th
             animation single-bounce 1.0s infinite ease-in-out
+        .spin-color
+          stroke $color-spin-green
+          fill $color-spin-green
 
 </style>
