@@ -44,7 +44,7 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
   @import "../../assets/stylus/default.styl"
-  @import "./spin.styl"
+  @import "spinner.styl"
 
   .reflection
     position fixed

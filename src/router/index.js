@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Spin from '@/components/spin/spin'
+import Spinner from '@/components/spinner/spinner'
 import CheckBox from '@/components/checkbox/checkbox'
 
 Vue.use(Router)
@@ -8,9 +8,9 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/spin',
-      name: 'spin',
-      component: Spin
+      path: '/spinner',
+      name: 'spinner',
+      component: Spinner
     },
     {
       path: '/checkbox',

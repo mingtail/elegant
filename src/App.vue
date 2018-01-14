@@ -26,6 +26,7 @@
   @import "assets/stylus/default.styl"
 
   #app
+    overflow-x hidden
     .app-header
       padding 10px
       text-align center
