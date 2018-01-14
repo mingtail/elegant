@@ -7,7 +7,7 @@
                @refresh="refresh">
       </refresh>
       <ul>
-        <li v-for="item in list" class="item border-bottom-1px">item {{item}}</li>
+        <li v-for="item in list" class="item border-bottom-1px" @click="showLoad">item {{item}}</li>
       </ul>
       <infinite-scroll :scroller="scroller"
                        :loading="loading"

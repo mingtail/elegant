@@ -7,6 +7,10 @@
         <label :for="`item_${index}`" class="text" :class="{checked: item.isChecked}">{{item.content}}</label>
       </li>
     </ul>
+
+    <div class="btn-wrap">
+      <button class="a-btn" @click="showLoad">显示加载</button>
+    </div>
   </div>
 </template>
 
@@ -22,6 +26,11 @@
           {content: '睡觉', isChecked: true},
           {content: '打豆豆', isChecked: false}
         ]
+      }
+    },
+    methods: {
+      showLoad() {
+        this.$load.show();
       }
     },
     components: {
@@ -64,6 +73,17 @@
           &.checked
             color $color-light-grey
             text-decoration line-through
+    .btn-wrap
+      margin-top 20px
+      text-align center
+      .a-btn
+        width 100px
+        height 36px
+        color #fff
+        border-radius 5px
+        background-color $color-orange
+        &:active
+          background-color $color-orange * 0.8
 </style>
 <style scoped rel="css/text">
   .toggle::after{
