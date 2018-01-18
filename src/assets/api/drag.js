@@ -1,7 +1,7 @@
 const IS_TOUCH = typeof window !== 'undefined' && (('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch)
 export default class Drag {
   constructor (element) {
-    this.el = element;
+    this.el = element
     this.startPos = {}
     this.endPos = {}
     this.starts = []
@@ -146,7 +146,7 @@ export default class Drag {
       y: 0
     }
   }
-  destory () {
+  destroy () {
     if (IS_TOUCH) {
       this.el.removeEventListener('touchstart', this, false)
     } else {

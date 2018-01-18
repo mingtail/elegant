@@ -101,6 +101,7 @@
       left 0
       width 100%
       overflow auto
+      user-select none
       -webkit-overflow-scrolling touch
       .item
         padding 10px

@@ -1,5 +1,5 @@
 <template>
-  <div class="m-refresh" :style="refreshStyle" :class="refreshClass"  v-show="y>5">
+  <div v-show="showRefresh" class="m-refresh" :style="refreshStyle" :class="refreshClass">
     <svg v-show="!refreshing && draging" viewBox="0 0 24 24" class="m-refresh-icon" :style="circularStyle">
       <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"></path>
     </svg>
@@ -63,7 +63,7 @@
             classNames.push('m-refresh-noshow')
             break
           case 'dragStart':
-            classNames.push('m-refresh--hide')
+            classNames.push('m-refresh-hide')
             break
           case 'dragAnimate':
             classNames.push('m-refresh-animate')
@@ -81,10 +81,13 @@
     mounted () {
       this.bindDrag()
     },
-    beforeDestory () {
+    beforeDestroy () {
       this.unbindDrag()
     },
     methods: {
+      showRefresh() {
+        return this.y > 5;
+      },
       clearState () {
         this.state = 'ready'
         this.draging = false
@@ -153,7 +156,7 @@
       },
       unbindDrag () {
         if (!this.drager) return
-        this.drager.destory()
+        this.drager.destroy()
         this.drager = null
       }
     },
