@@ -22,7 +22,7 @@
 <script>
   import IHeader from '../components/header/iheader'
   import Refresh from '../components/refresh/refresh'
-  import InfiniteScroll from '../components/refresh/infiniteScroll'
+  import InfiniteScroll from '../components/infiniteScroll/infiniteScroll'
 
   export default {
     name: "refresh-list",

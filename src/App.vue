@@ -30,8 +30,8 @@
     .app-header
       padding 10px
       text-align center
-      box-shadow 0 0 5px $color-light-grey
-      background-color $color-light-grey-sss
+      box-shadow 0 0 5px $color-light-gray
+      background-color $color-wx-gray
     .r-view
       &.move-enter-active, &.move-leave-active
         transition all .2s ease

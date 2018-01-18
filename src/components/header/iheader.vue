@@ -29,9 +29,9 @@
     line-height 44px
     font-size 16px
     text-align center
-    color $color-grey
-    box-shadow 0 0 8px $color-light-grey
-    background-color $color-light-grey-sss
+    color $color-gray
+    box-shadow 0 0 8px $color-light-gray
+    background-color $color-light-gray-sss
     .back
       position absolute
       left 0
