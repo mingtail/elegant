@@ -21,8 +21,8 @@
 
 <script>
   import IHeader from '../components/header/iheader'
-  import Refresh from '../components/infiniteScroll/refresh'
-  import InfiniteScroll from '../components/infiniteScroll/infiniteScroll'
+  import Refresh from '../components/refresh/refresh'
+  import InfiniteScroll from '../components/refresh/infiniteScroll'
 
   export default {
     name: "refresh-list",

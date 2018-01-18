@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Spinner from '../components/spinner/spinner'
-import CheckBox from '../components/checkbox/checkbox'
+import Spinner from '../pages/spinner'
+import CheckList from '../pages/checkbox'
 import List from '../pages/refreshList'
+import Circle from '../pages/circle'
 
 Vue.use(Router)
 
@@ -14,14 +15,19 @@ export default new Router({
       component: Spinner
     },
     {
-      path: '/checkbox',
-      name: 'checkbox',
-      component: CheckBox
+      path: '/checkList',
+      name: 'checkList',
+      component: CheckList
     },
     {
       path: '/refresh-infiniteScroll',
       name: 'list',
       component: List
+    },
+    {
+      path: '/circle',
+      name: 'circle',
+      component: Circle
     }
   ]
 })

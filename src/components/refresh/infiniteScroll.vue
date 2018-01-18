@@ -29,6 +29,7 @@
 
 <script>
   import Scroll from '../../assets/api/scroll'
+
   export default {
     name: 'infinite-scroll',
     mixins: [Scroll],

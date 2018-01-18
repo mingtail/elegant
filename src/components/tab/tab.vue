@@ -5,10 +5,13 @@
         <router-link to="/spinner" class="cell">Spinner<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
-        <router-link to="/checkbox" class="cell">CheckBox<i class="icon-arrow-right"></i></router-link>
+        <router-link to="/checkList" class="cell">CheckList<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
         <router-link to="/refresh-infiniteScroll" class="cell">refresh-infiniteScroll<i class="icon-arrow-right"></i></router-link>
+      </li>
+      <li class="tab-item border-bottom-1px">
+        <router-link to="/circle" class="cell">circle<i class="icon-arrow-right"></i></router-link>
       </li>
     </ul>
   </section>
@@ -29,7 +32,7 @@
         display block
         padding 15px
         font-size 14px
-        color $color-grey
+        color $color-gray
         & > i
           position absolute
           right 0

@@ -95,8 +95,8 @@
 </template>
 
 <script type="text/javascript">
-  import IHeader from '../header/iheader'
-  import Reflection from './reflection'
+  import IHeader from '../components/header/iheader'
+  import Reflection from '../components/spinner/reflection'
 
   export default {
     data() {
@@ -126,8 +126,8 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../../assets/stylus/default.styl"
-  @import "spinner.styl"
+  @import "../assets/stylus/default.styl"
+  @import "../components/spinner/spinner.styl"
 
   .spin-container
     position fixed
