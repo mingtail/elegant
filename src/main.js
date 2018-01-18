@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Load from '@/components/load'
+import Load from './plugins/load'
 
 import './assets/stylus/index.styl'
 

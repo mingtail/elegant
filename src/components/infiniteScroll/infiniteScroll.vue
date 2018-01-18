@@ -71,13 +71,15 @@
     width 100%
     color #999
     .m-loading
+      padding-top 10px
+      height 100%
       text-align center
       & span
         display inline-block
         stroke #2ed335
         fill #2ed335
-        width 28px
-        height 28px
+        width 30px
+        height 30px
     .no-data
       position relative
       margin 0 auto

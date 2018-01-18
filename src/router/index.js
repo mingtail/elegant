@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Spinner from '@/components/spinner/spinner'
-import CheckBox from '@/components/checkbox/checkbox'
-import List from '@/components/infiniteScroll/list'
+import Spinner from '../components/spinner/spinner'
+import CheckBox from '../components/checkbox/checkbox'
+import List from '../pages/refreshList'
 
 Vue.use(Router)
 

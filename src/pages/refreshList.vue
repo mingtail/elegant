@@ -7,7 +7,7 @@
                @refresh="refresh">
       </refresh>
       <ul>
-        <li v-for="item in list" class="item border-bottom-1px" @click="showLoad">item {{item}}</li>
+        <li v-for="item in list" class="item border-bottom-1px">item {{item}}</li>
       </ul>
       <infinite-scroll :scroller="scroller"
                        :loading="loading"
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import IHeader from '../header/iheader'
-  import Refresh from './refresh'
-  import InfiniteScroll from './infiniteScroll'
+  import IHeader from '../components/header/iheader'
+  import Refresh from '../components/infiniteScroll/refresh'
+  import InfiniteScroll from '../components/infiniteScroll/infiniteScroll'
 
   export default {
-    name: "list",
+    name: "refresh-list",
     data() {
       return {
         title: 'Refresh-InfiniteScroll',
@@ -44,35 +44,35 @@
     },
     mounted() {
       for(let i = 1; i <= 20; i++) {
-        this.list.push(i);
+        this.list.push(i)
       }
       this.$nextTick(() => {
-        this.trigger = this.scroller = this.$refs.listWrap;
+        this.trigger = this.scroller = this.$refs.listWrap
       })
     },
     methods: {
       refresh() {
         let self = this
-        self.refreshing = true;
+        self.refreshing = true
         setTimeout(() => {
           for(let i = 1; i <= 2; i++) {
-            self.list.unshift('refresh item' + self.refreshNum++);
+            self.list.unshift('refresh item' + self.refreshNum++)
           }
-          self.refreshing = false;
+          self.refreshing = false
         },2000)
       },
       loadMore() {
         let self = this
-        self.loading = true;
-        self.noData = false;
+        self.loading = true
+        self.noData = false
         setTimeout(() => {
           if(Math.random() > 0.5) {
             for(let i = 1; i <= 2; i++) {
-              self.list.push('load item' + self.loadNum++);
+              self.list.push('load item' + self.loadNum++)
             }
-            self.loading = false;
+            self.loading = false
           } else {
-            self.noData = true;
+            self.noData = true
           }
         },2000)
       }
