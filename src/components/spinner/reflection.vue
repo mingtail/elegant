@@ -19,22 +19,27 @@
         return `size-${this.size}`
       },
     },
+    beforeDestroy() {
+      clearTimeout(this.timerIndex)
+    },
     methods: {
       showReflection(x, y) {
 
-        let self = this;
+        let self = this
+        clearTimeout(self.timerIndex)
 
-        clearTimeout(self.timerIndex);
         self.$refs.reflection.querySelector('.bounce-reflection').classList.remove('bounce-3rd')
-        self.isShow = true;
+        self.isShow = true
 
-        self.$refs.reflection.style.left = x - 20 + 'px';
-        self.$refs.reflection.style.top = y - 20 + 'px';
+        self.$refs.reflection.style.left = x - 20 + 'px'
+        self.$refs.reflection.style.top = y - 20 + 'px'
 
-        self.$refs.reflection.querySelector('.bounce-reflection').classList.add('bounce-3rd')
+        requestAnimationFrame(() => {
+          self.$refs.reflection.querySelector('.bounce-reflection').classList.add('bounce-3rd')
+        })
 
         self.timerIndex = setTimeout(function() {
-          self.isShow = false;
+          self.isShow = false
           self.$refs.reflection.querySelector('.bounce-reflection').classList.remove('bounce-3rd')
         },1000)
       }
@@ -61,5 +66,5 @@
       opacity 0.6
       background-color $color-spin-blue
       &.bounce-3rd
-        animation single-bounce 1.0s infinite ease
+        animation single-bounce 1.0s ease
 </style>
