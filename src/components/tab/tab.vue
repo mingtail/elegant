@@ -11,7 +11,7 @@
         <router-link to="/refresh-infiniteScroll" class="cell">refresh-infiniteScroll<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
-        <router-link to="/circle" class="cell">circle<i class="icon-arrow-right"></i></router-link>
+        <router-link to="/progress" class="cell">progress<i class="icon-arrow-right"></i></router-link>
       </li>
     </ul>
   </section>

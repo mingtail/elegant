@@ -1,6 +1,6 @@
 <template>
   <div class="spin-container" @mousedown="showCircle($event)">
-    <i-header :title="title"></i-header>
+    <i-header title="Spinner"></i-header>
     <ul class="spin-list">
 
       <li class="spin-item border-bottom-1px">
@@ -101,7 +101,6 @@
   export default {
     data() {
       return {
-        title: 'Spinner',
         size: 40,
         isShow: false,
         timerIndex: 0

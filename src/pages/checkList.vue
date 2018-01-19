@@ -1,6 +1,6 @@
 <template>
   <div class="check-box">
-    <i-header :title="title"></i-header>
+    <i-header title="CheckBox"></i-header>
     <ul class="check-list">
       <li v-for="(item, index) in list" class="check-item border-bottom-1px">
         <check-cell :item="item" :index="index"></check-cell>
@@ -8,7 +8,7 @@
     </ul>
 
     <div class="btn-wrap">
-      <button class="a-btn" @click="showLoad">显示加载</button>
+      <btn text="显示加载" @click.native="showLoad"></btn>
     </div>
   </div>
 </template>
@@ -16,11 +16,11 @@
 <script type="text/javascript">
   import IHeader from '../components/header/iheader'
   import CheckCell from '../components/checkCell/checkCell'
+  import Btn from '../components/btn/btn'
 
   export default {
     data() {
       return {
-        title: 'CheckBox',
         list: [
           {content: '吃饭', isChecked: false},
           {content: '睡觉', isChecked: true},
@@ -35,14 +35,14 @@
     },
     components: {
       IHeader,
-      CheckCell
+      CheckCell,
+      Btn
     }
   }
 
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../assets/stylus/default.styl"
 
   .check-box
     position fixed
@@ -52,16 +52,7 @@
     height 100%
     background-color #fff
     .check-list
-      padding 10px 10px 0
+      padding 10px 10px 20px
     .btn-wrap
-      margin-top 20px
       text-align center
-      .a-btn
-        width 100px
-        height 36px
-        color #fff
-        border-radius 5px
-        background-color $color-orange
-        &:active
-          background-color $color-orange * 0.8
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrap">
-    <i-header :title="title"></i-header>
+    <i-header title="Refresh-InfiniteScroll"></i-header>
     <div class="list-wrap" ref="listWrap">
       <refresh :refreshing="refreshing"
                :trigger="trigger"
@@ -28,8 +28,6 @@
     name: "refresh-list",
     data() {
       return {
-        title: 'Refresh-InfiniteScroll',
-
         refreshing: false,
         trigger: null,
 

@@ -19,7 +19,7 @@
       },
       strokeColor: {
         type: String,
-        default: '#3FC7FA'
+        default: '#2ed335'
       },
       trailWidth: {
         type: Number,
@@ -27,7 +27,7 @@
       },
       trailColor: {
         type: String,
-        default: '#D9D9D9'
+        default: '#d9d9d9'
       },
       percent: {
         type: Number,

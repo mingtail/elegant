@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Spinner from '../pages/spinner'
-import CheckList from '../pages/checkbox'
+import CheckList from '../pages/checkList'
 import List from '../pages/refreshList'
-import Circle from '../pages/circle'
+import Progress from '../pages/progress'
 
 Vue.use(Router)
 
@@ -25,9 +25,9 @@ export default new Router({
       component: List
     },
     {
-      path: '/circle',
-      name: 'circle',
-      component: Circle
+      path: '/progress',
+      name: 'progress',
+      component: Progress
     }
   ]
 })
