@@ -14,6 +14,11 @@
         }
       })
     },
+    methods: {
+      countReset() {
+        this._countup.reset()
+      }
+    },
     props: {
       start: {
         type: Boolean,
