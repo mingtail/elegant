@@ -4,6 +4,7 @@ import Spinner from '../pages/spinner'
 import CheckList from '../pages/checkList'
 import List from '../pages/refreshList'
 import Progress from '../pages/progress'
+import Count from '../pages/count'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/progress',
       name: 'progress',
       component: Progress
+    },
+    {
+      path: '/count',
+      name: 'count',
+      component: Count
     }
   ]
 })

@@ -8,10 +8,13 @@
         <router-link to="/checkList" class="cell">CheckList<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
-        <router-link to="/refresh-infiniteScroll" class="cell">refresh-infiniteScroll<i class="icon-arrow-right"></i></router-link>
+        <router-link to="/refresh-infiniteScroll" class="cell">Refresh-InfiniteScroll<i class="icon-arrow-right"></i></router-link>
       </li>
       <li class="tab-item border-bottom-1px">
-        <router-link to="/progress" class="cell">progress<i class="icon-arrow-right"></i></router-link>
+        <router-link to="/progress" class="cell">Progress<i class="icon-arrow-right"></i></router-link>
+      </li>
+      <li class="tab-item border-bottom-1px">
+        <router-link to="/count" class="cell">Count<i class="icon-arrow-right"></i></router-link>
       </li>
     </ul>
   </section>

@@ -1,6 +1,6 @@
 <template>
   <div class="check-box">
-    <i-header title="CheckBox"></i-header>
+    <i-header title="CheckList"></i-header>
     <ul class="check-list">
       <li v-for="(item, index) in list" class="check-item border-bottom-1px">
         <check-cell :item="item" :index="index"></check-cell>

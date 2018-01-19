@@ -1,6 +1,6 @@
 <template>
   <div class="progress-wrap">
-    <i-header title="progress"></i-header>
+    <i-header title="Progress"></i-header>
     <ul>
       <li class="item">
         <x-circle :percent="percent" :stroke-width="6" :trail-width="6" :stroke-color="strokeColor"><span>{{percent/10}}</span></x-circle>
