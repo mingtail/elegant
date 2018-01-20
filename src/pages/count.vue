@@ -14,7 +14,7 @@
     </div>
 
     <div class="btn-wrap">
-      <btn text="开始" @click.native="startCount"></btn>
+      <btn text="走你" @click.native="startCount"></btn>
       <btn text="重置" @click.native="resetCount"></btn>
     </div>
   </div>

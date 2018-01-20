@@ -35,7 +35,9 @@
         self.$refs.reflection.style.top = y - 20 + 'px'
 
         requestAnimationFrame(() => {
-          self.$refs.reflection.querySelector('.bounce-reflection').classList.add('bounce-3rd')
+          if(self.$refs.reflection !== undefined) {
+            self.$refs.reflection.querySelector('.bounce-reflection').classList.add('bounce-3rd')
+          }
         })
 
         self.timerIndex = setTimeout(function() {
