@@ -37,7 +37,7 @@
       },
       trend: {
         type: String,
-        default: 'horizontal' // 支持水平和竖直
+        default: 'horizontal' // 支持水平和垂直方向
         // default: 'vertical'
       }
     },
