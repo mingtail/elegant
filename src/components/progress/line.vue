@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: "line",
+    name: "x-line",
     props: {
       strokeWidth: {
         type: Number,

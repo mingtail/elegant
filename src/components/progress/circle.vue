@@ -11,7 +11,7 @@
 <script>
 
   export default {
-    name: 'circle',
+    name: 'x-circle',
     props: {
       strokeWidth: {
         type: Number,
