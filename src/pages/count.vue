@@ -17,6 +17,10 @@
       <btn text="走你" @click.native="startCount"></btn>
       <btn text="重置" @click.native="resetCount"></btn>
     </div>
+    <div class="btn-wrap">
+      <btn text="暂停/继续" @click.native="pauseCount"></btn>
+      <btn text="更新" @click.native="updateCount"></btn>
+    </div>
   </div>
 </template>
 
@@ -25,7 +29,7 @@
   import CountUp from '../components/countUp/countUp'
   import Btn from '../components/btn/btn'
 
-  // countUp 有 开始, 暂停, 重置 等方法
+  // countUp 有 开始, 暂停, 重置, 更新 等方法
   export default {
     name: "count",
     data() {
@@ -39,7 +43,13 @@
       },
       resetCount() {
         this.goYou = false
-        this.$refs.theCount.countReset()
+        this.$refs.theCount.reset()
+      },
+      pauseCount() {
+        this.$refs.theCount.pauseResume()
+      },
+      updateCount() {
+        this.$refs.theCount.update(9999)
       }
     },
     components: {

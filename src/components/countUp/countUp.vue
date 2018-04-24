@@ -15,8 +15,18 @@
       })
     },
     methods: {
-      countReset() {
+      startCount() {
+        this._countup.start()
+      },
+      reset() {
         this._countup.reset()
+      },
+      pauseResume() {
+        this._countup.pauseResume()
+      },
+      // 直接调用update函数更新。 也可以直接更新数据, 通过watch开触发update函数
+      update(num) {
+        this._countup.update(num)
       }
     },
     props: {
