@@ -9,6 +9,7 @@
 
     <div class="btn-wrap">
       <btn text="显示加载" @click.native="showLoad"></btn>
+      <btn text="显示加载2" @click.native="showLoad2"></btn>
     </div>
   </div>
 </template>
@@ -31,6 +32,9 @@
     methods: {
       showLoad() {
         this.$load.show();
+      },
+      showLoad2() {
+        this.$loading.show({text:'加载中'})
       }
     },
     components: {

@@ -2,7 +2,7 @@
   "name": "elegant",
   "version": "1.0.0",
   "description": "useful components for vue",
-  "author": "mingtail <mingtail@qq.com>",
+  "author": "mingtail",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
