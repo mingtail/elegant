@@ -11,11 +11,11 @@ export default {
     }
     $vm.show = false
     let Loading = {
-      show({ color, text }) {
+      show({ color, text } = {}) {
         document.body.appendChild($vm.$el)
         $vm.show = true;
-        $vm.color = color;
-        $vm.text = text;
+        $vm.color = color || options.color;
+        $vm.text = text || options.text;
       },
       hide() {
         $vm.show = false
