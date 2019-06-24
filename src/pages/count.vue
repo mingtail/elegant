@@ -10,7 +10,7 @@
     </div>
 
     <div class="count-item">
-      <count-up :end-val="4999" :duration="3" :start="goYou" ref="theCount"></count-up>
+      <count-up :end-val="4999" :options="options" ref="theCount"></count-up>
     </div>
 
     <div class="btn-wrap">
@@ -34,12 +34,15 @@
     name: "count",
     data() {
       return {
-        goYou: false
+        goYou: false,
+        options: {
+          duration: 3 // 单位: s
+        }
       }
     },
     methods: {
       startCount() {
-        this.goYou = true
+        this.$refs.theCount.start();
       },
       resetCount() {
         this.goYou = false
@@ -76,7 +79,5 @@
       text-align center
       font-size 30px
       color $color-green
-    .btn-wrap
-      margin-top 30px
-      text-align center
+
 </style>

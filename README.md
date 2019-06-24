@@ -1,39 +1,29 @@
 # elegant
 
-> useful components for vue
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+## Project setup
 ```
-## components list
+yarn install
+```
 
-> refresh 下拉刷新
+### Compiles and hot-reloads for development
+```
+yarn run serve
+```
 
-> infinitScroll 无限加载
+### Compiles and minifies for production
+```
+yarn run build
+```
 
-> progress 环形、条形进度条
+### Run your tests
+```
+yarn run test
+```
 
-> spinner
+### Lints and fixes files
+```
+yarn run lint
+```
 
-> countUp
-
-> checkCell
-
-> btn、tab
-
-> to be continued...
-
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

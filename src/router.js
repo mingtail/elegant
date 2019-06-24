@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Spinner from '../pages/spinner'
-import CheckList from '../pages/checkList'
-import List from '../pages/refreshList'
-import Progress from '../pages/progress'
-import Count from '../pages/count'
+import Spinner from './pages/spinner'
+import CheckList from './pages/checkList'
+import List from './pages/refreshList'
+import Progress from './pages/progress'
+import Count from './pages/count'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/spinner',

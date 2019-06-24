@@ -28,7 +28,7 @@
   import Btn from '../components/btn/btn'
 
   export default {
-    name: "circle",
+    name: "x-progress",
     data() {
       return {
         percent: 50,
@@ -39,6 +39,7 @@
     methods: {
       decrease() {
         let self = this
+        clearInterval(self.countDown)
         self.countDown = setInterval(() => {
           if(self.percent > 0) {
             self.percent -= 10

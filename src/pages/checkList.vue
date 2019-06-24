@@ -32,9 +32,16 @@
     methods: {
       showLoad() {
         this.$load.show();
+        setTimeout(() => {
+          this.$load.hide();
+        }, 2000);
       },
       showLoad2() {
-        this.$loading.show({text:'加载中'})
+        // 可以全局自定义, 或者show({color: '', text: ''})
+        this.$loading.show({text:'加载中'});
+        setTimeout(() => {
+          this.$loading.hide();
+        }, 2000);
       }
     },
     components: {
@@ -57,6 +64,5 @@
     background-color #fff
     .check-list
       padding 10px 10px 20px
-    .btn-wrap
-      text-align center
+
 </style>
