@@ -1,38 +1,45 @@
 <template>
-  <header class="i-header border-bottom-1px">
-    <i class="back icon-arrow-left" @click="goBack"></i>{{title}}
-  </header>
+  <div class="header border-bottom-1px">
+    <i v-if="back" class="icon-back icon-arrow-left i-hover" @click="goBack"></i>
+    <span v-if="title!==''">{{title}}</span>
+    <slot></slot>
+  </div>
 </template>
 
-<script type="text/javascript">
+<script>
   export default {
+    name: "i-head",
     props: {
-      title: String
-    },
-    data() {
-      return {}
+      back: {
+        type: Boolean,
+        default: true
+      },
+      title: {
+        type: String,
+        required: true
+      }
     },
     methods: {
       goBack() {
-        this.$router.back()
+        this.$router.back();
       }
     }
   }
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../../assets/stylus/default.styl"
+  @import "../../assets/stylus/variable.styl"
 
-  .i-header
+  .header
     position relative
-    height 44px
-    line-height 44px
+    height: 50px;
+    line-height: 50px;
     font-size 16px
     text-align center
     color $color-gray
     box-shadow 0 0 8px $color-light-gray
     background-color $color-light-gray-sss
-    .back
+    .icon-back
       position absolute
       left 0
       padding 0 15px

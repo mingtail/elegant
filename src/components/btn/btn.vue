@@ -19,7 +19,7 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../../assets/stylus/default.styl"
+  @import "../../assets/stylus/variable.styl"
 
   .btn
     width 100px

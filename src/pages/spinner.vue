@@ -1,5 +1,5 @@
 <template>
-  <div class="spin-container" @mousedown="showCircle($event)">
+  <div class="page page_spins">
     <i-header title="Spinner"></i-header>
     <ul class="spin-list">
 
@@ -89,14 +89,14 @@
 
     </ul>
 
-    <reflection :size="40" ref="reflection"></reflection>
+    <!--<reflection :size="40" ref="reflection"></reflection>-->
 
   </div>
 </template>
 
 <script type="text/javascript">
   import IHeader from '../components/header/iheader'
-  import Reflection from '../components/spinner/reflection'
+  // import Reflection from '../components/spinner/reflection'
 
   export default {
     data() {
@@ -112,29 +112,22 @@
       }
     },
     methods: {
-      showCircle(e) {
-        this.$refs.reflection.showReflection(e.pageX, e.pageY)
-      }
+      // showCircle(e) {
+      //   this.$refs.reflection.showReflection(e.pageX, e.pageY)
+      // }
     },
     components: {
       IHeader,
-      Reflection
+      // Reflection
     }
   }
 
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../assets/stylus/default.styl"
-  @import "../components/spinner/spinner.styl"
+  @import "../assets/stylus/variable.styl"
 
-  .spin-container
-    position fixed
-    left 0
-    top 0
-    width 100%
-    height 100%
-    background-color #fff
+  .page_spins
     .spin-list
       padding 0 10px
       .spin-item

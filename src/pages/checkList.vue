@@ -1,5 +1,5 @@
 <template>
-  <div class="check-box">
+  <div class="page page_checkbox">
     <i-header title="CheckList"></i-header>
     <ul class="check-list">
       <li v-for="(item, index) in list" class="check-item border-bottom-1px">
@@ -55,13 +55,7 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
-  .check-box
-    position fixed
-    left 0
-    top 0
-    width 100%
-    height 100%
-    background-color #fff
+  .page_checkbox
     .check-list
       padding 10px 10px 20px
 

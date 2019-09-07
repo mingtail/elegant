@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrap">
+  <div class="page page_refresh_list">
     <i-header title="Refresh-InfiniteScroll"></i-header>
     <div class="list-wrap" ref="listWrap">
       <refresh :refreshing="refreshing"
@@ -85,16 +85,10 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
-  .page-wrap
-    position fixed
-    left 0
-    top 0
-    width 100%
-    height 100%
-    background-color #fff
+  .page_refresh_list
     .list-wrap
       position absolute
-      top 44px
+      top 50px
       bottom 0
       left 0
       width 100%

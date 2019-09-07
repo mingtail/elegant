@@ -1,5 +1,5 @@
 <template>
-  <div class="count-wrap">
+  <div class="page page_count">
     <i-header title="Count"></i-header>
     <div class="count-item">
       <count-up :start-val="1000" :end-val="100" :duration="3"></count-up>
@@ -64,16 +64,10 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
-  @import "../assets/stylus/default.styl"
+  @import "../assets/stylus/variable.styl"
 
-  .count-wrap
-    position fixed
-    left 0
-    top 0
-    width 100%
-    height 100%
+  .page_count
     overflow-y auto
-    background-color #fff
     .count-item
       padding 20px
       text-align center

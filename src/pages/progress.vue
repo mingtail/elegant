@@ -1,5 +1,5 @@
 <template>
-  <div class="progress-wrap">
+  <div class="page page_progress">
     <i-header title="Progress"></i-header>
     <ul>
       <li class="item">
@@ -66,14 +66,8 @@
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
-  .progress-wrap
-    position fixed
-    left 0
-    top 0
-    width 100%
-    height 100%
+  .page_progress
     overflow-y auto
-    background-color #fff
     .item
       margin 10px auto
       width 100px
