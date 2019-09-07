@@ -1,6 +1,6 @@
 <template>
   <div class="page page_refresh_list">
-    <i-header title="Refresh-InfiniteScroll"></i-header>
+    <i-header title="RefreshList"></i-header>
     <div class="list-wrap" ref="listWrap">
       <refresh :refreshing="refreshing"
                :trigger="trigger"

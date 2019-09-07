@@ -1,6 +1,6 @@
 <template>
   <div class="page page_bscroll">
-    <i-header title="问答"></i-header>
+    <i-header title="BScroll"></i-header>
 
     <div class="page-scroll">
       <scroll ref="scroll"
